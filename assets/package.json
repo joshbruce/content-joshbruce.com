@@ -1,0 +1,24 @@
+{
+  "name": "site-joshbruce",
+  "version": "1.0.0",
+  "description": "For compiling Sass and JS for joshbruce.com",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josh Bruce",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-dart-scss": "^1.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss-csso": "^5.0.1",
+    "postcss-discard-comments": "^5.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "gulp": "^4.0.2",
+    "sass": "^1.43.4"
+  }
+}

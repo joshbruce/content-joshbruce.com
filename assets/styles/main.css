@@ -1,0 +1,298 @@
+@charset "UTF-8";
+:root{
+  --test-watch:"hello";
+  --header-font:"Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  --body-font:"Open Sans", "Helvetica Neue", Verdana, sans-serif;
+  --bold-font:500;
+  --light-font:250;
+  --3xl-font:clamp(32pt, 10vw, 40pt);
+  --2xl-font:clamp(30pt, 9.375vw, 35pt);
+  --xl-font:clamp(25pt, 7.8125vw, 30pt);
+  --l-font:clamp(20pt, 6.25vw, 25pt);
+  --m-font:clamp(16pt, 5vw, 18pt);
+  --s-font:clamp(13pt, 4.0625vw, 15pt);
+  --xs-font:clamp(10pt, 3.125vw, 14pt);
+  --l-line-height:calc(var(--3xl-font) * 1);
+  --m-line-height:calc(var(--m-font) * 1.62);
+  --s-line-height:calc(var(--s-font) * 1.25);
+  --line-length:70ch;
+  --key:#0C758D;
+  --gray-darkest:#030303;
+  --gray-darker:#0F2124;
+  --gray-lightest:#FCFDFD;
+  --transition-bg-color:background-color 0.25s;
+  --vw-0:0vw;
+  --100-percent:100%;
+  --0-spacer:0;
+  --xl-spacer:4rem;
+  --l-spacer:2rem;
+  --m-spacer:1rem;
+  --s-spacer:0.75rem;
+  --xs-spacer:0.5rem;
+  --2xs-spacer:0.25rem;
+  --3xs-spacer:0.1rem;
+  --1-px:1px;
+  --400-px:400px;
+  --icon-new-window:"⧉";
+  --icon-lift-spacer:-0.5rem;
+  --margin-centered:var(--0-spacer) var(--auto);
+  --smooth:smooth;
+  --auto:auto;
+  --pointer:pointer;
+  --none:none;
+  --transition-color:color 0.25s;
+  --center:center;
+  --left:left;
+  --inline-block:inline-block;
+  --solid:solid;
+  --transparent:transparent;
+  --relative:relative;
+  --italic:italic;
+  --block:block;
+  --both:both;
+}
+
+html{
+  scroll-behavior:var(--smooth);
+}
+
+body{
+  min-height:var(--vw-0);
+  max-width:var(--line-length);
+  margin:var(--margin-centered);
+  background:var(--gray-lightest);
+  color:var(--gray-darkest);
+  font-family:var(--body-font);
+  font-size:var(--m-font);
+  line-height:var(--m-line-height);
+  font-weight:var(--light-font);
+}
+
+a,
+button{
+  font-weight:var(--bold-font);
+}
+
+a:hover,
+button:hover,
+select:hover{
+  cursor:var(--pointer);
+}
+
+a{
+  -webkit-text-decoration:var(--none);
+  text-decoration:var(--none);
+  font-weight:var(--bold-font);
+  color:var(--key);
+  transition:var(--transition-color);
+}
+
+a:hover{
+  color:var(--gray-darker);
+}
+
+button{
+  background:var(--key);
+  border:var(--none);
+  color:var(--gray-lightest);
+  transition:var(--transition-bg-color);
+  font-size:var(--m-font);
+}
+
+button:hover{
+  background:var(--gray-darker);
+}
+
+.header{
+  margin-top:var(--xl-spacer);
+  text-align:var(--center);
+}
+
+.main-quote{
+  font-style:var(--italic);
+  text-align:var(--center);
+}
+.main-quote:before{
+  content:"“";
+}
+.main-quote:after{
+  content:"”";
+}
+
+[is=dateblock]{
+  margin-bottom:var(--xl-spacer);
+}
+[is=dateblock] p{
+  margin:var(--0-spacer);
+  font-size:var(--xs-font);
+}
+[is=dateblock] p > time{
+  font-weight:var(--bold-font);
+}
+
+[is=asset-chart] > *{
+  width:var(--100-percent);
+}
+
+body > #main-nav-form{
+  text-align:var(--center);
+}
+body > #main-nav-form label{
+  display:var(--inline-block);
+  margin-right:var(--m-spacer);
+}
+body > #main-nav-form select{
+  -webkit-appearance:var(--none);
+  -moz-appearance:var(--none);
+  appearance:var(--none);
+  border-radius:var(--0-spacer);
+  border:var(--none);
+  border-bottom:var(--3xs-spacer) var(--solid) var(--key);
+  background:var(--transparent);
+  color:var(--key);
+  font-size:var(--m-font);
+}
+body > #main-nav-form button{
+  position:var(--relative);
+  top:var(--2xs-spacer);
+  margin:var(--0-spacer) var(--m-spacer);
+  padding:var(--2xs-spacer) var(--m-spacer);
+  border-radius:var(--xs-spacer);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin-top:var(--xl-spacer);
+  font-family:var(--head-font);
+  font-size:var(--3xl-font);
+  line-height:var(--l-line-height);
+}
+
+h1{
+  margin-top:var(--m-spacer);
+}
+
+h2{
+  font-size:var(--2xl-font);
+}
+
+h3,
+h4,
+h5,
+h6{
+  font-size:var(--xl-font);
+  text-align:var(--center);
+}
+
+.toc{
+  padding:var(--none);
+  list-style:var(--none);
+}
+.toc li{
+  border-bottom:var(--1-px) var(--solid) var(--gray-darker);
+}
+.toc li:last-child{
+  border-bottom:var(--none);
+}
+.toc h3{
+  margin:var(--xs-spacer);
+  text-align:var(--left);
+  font-size:var(--l-font);
+}
+.toc h3 a{
+  display:var(--block);
+  padding:var(--m-spacer);
+}
+.toc h3 small{
+  font-size:var(--s-font);
+  display:var(--block);
+  color:var(--gray-darker);
+  font-weight:var(--light-font);
+}
+
+main, article{
+  margin:var(--0-spacer) var(--xs-spacer);
+  padding-top:var(--xl-spacer);
+}
+
+.heading-permalink{
+  display:var(--inline-block);
+  margin-right:var(--2xs-spacer);
+}
+
+.pull-content-form{
+  max-width:var(--400-px);
+  margin:var(--margin-centered);
+}
+.pull-content-form label{
+  font-size:var(--s-font);
+}
+.pull-content-form input{
+  padding:var(--xs-spacer) var(--2xs-spacer);
+  display:var(--block);
+  width:280px;
+  border:1px solid var(--gray-darkest);
+  font-size:var(--m-font);
+}
+.pull-content-form button{
+  margin:var(--m-spacer) var(--auto);
+}
+.pull-content-form fieldset{
+  margin:var(--l-spacer) 0;
+  padding:var(--none);
+  border:none;
+}
+.pull-content-form fieldset legend{
+  position:absolute;
+  left:-999em;
+}
+.pull-content-form fieldset > ul{
+  margin:var(--none);
+  padding:var(--none);
+}
+.pull-content-form fieldset > ul > li{
+  margin-top:20px;
+  display:grid;
+  grid-template-areas:"control label";
+  grid-template-columns:20px auto;
+}
+.pull-content-form fieldset > ul > li input{
+  align-self:center;
+  grid-area:control;
+}
+.pull-content-form fieldset > ul > li label{
+  grid-area:label;
+  margin-top:0;
+  margin-left:var(--m-spacer);
+  line-height:var(--l-spacer);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  border:1px solid var(--gray-darkest);
+}
+table td, table th{
+  padding:var(--xs-spacer) var(--s-spacer);
+  border:1px solid var(--gray-darkest);
+}
+
+a[rel~=noreferrer]:after{
+  content:var(--icon-new-window);
+  display:var(--inline-block);
+  margin-left:var(--2xs-spacer);
+  position:var(--relative);
+  top:var(--icon-lift-spacer);
+}
+
+footer{
+  margin-top:var(--xl-spacer);
+}
+footer > p{
+  text-align:var(--center);
+  font-size:var(--xs-font);
+}

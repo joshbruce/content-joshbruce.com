@@ -1,0 +1,3 @@
+---
+redirect: /design-your-life
+---

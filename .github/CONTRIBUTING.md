@@ -34,6 +34,8 @@ This will create a new pull request and notify me to review the proposed change.
 
 If you don't feel comfortable updating the content yourself, you can create an [issue](https://github.com/joshbruce/content-joshbruce.com/issues). Or, if the comment isn't specific to content (your just want to chat), use the [discussions tab](https://github.com/joshbruce/content-joshbruce.com/discussions).
 
+Note: Any folder starting with an underscore (_) represents draft content that may never actually see the light of day. You may notice that some of them start off sounding like rants and a bit heavy on the "get off my lawn" and that's somewhat how I operate—my frustration gets channeled into creativity and challenging myself and the idea in my head. And, hopefully, it moves to something of value.
+
 ### For the more daring
 
 Either:
@@ -50,3 +52,9 @@ Once the repository is cloned, [create a branch](https://docs.github.com/en/desk
 That's pretty much it.
 
 (If you think something is missing, please use these instructions to let me know.)
+
+## Style and interaction changes
+
+From a development perspective, one of the things that may be considered odd for this project is that the style (CSS) and interaction (JavaScript) components are stored with the content, not the [application](https://github.com/8fold/site-joshbruce.com).
+
+These elements are compiled using NPM packages and can be found in the [assets]()
