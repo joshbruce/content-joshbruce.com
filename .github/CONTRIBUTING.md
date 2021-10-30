@@ -57,4 +57,4 @@ That's pretty much it.
 
 From a development perspective, one of the things that may be considered odd for this project is that the style (CSS) and interaction (JavaScript) components are stored with the content, not the [application](https://github.com/8fold/site-joshbruce.com).
 
-These elements are compiled using NPM packages and can be found in the [assets]()
+These elements are compiled using NPM packages and can be found in the [assets](https://github.com/joshbruce/content-joshbruce.com/tree/main/assets); so, there is "code" here.
