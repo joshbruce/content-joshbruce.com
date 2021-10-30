@@ -30,7 +30,7 @@ You would go to the following file:
 	- select "create a new branch", and
 	- click commit changes.
 	
-This will create a new pull request and notify me to review the proposed change. You'll get credited as a contributor to this project, however, Josh Bruce retains the copyright of the content per the terms of service.
+This will create a new pull request and notify me to review the proposed change. You will be credited as a contributor to this project, however, Josh Bruce retains the copyright of the content per the terms of service.
 
 If you don't feel comfortable updating the content yourself, you can create an [issue](https://github.com/joshbruce/content-joshbruce.com/issues). Or, if the comment isn't specific to content (your just want to chat), use the [discussions tab](https://github.com/joshbruce/content-joshbruce.com/discussions).
 
