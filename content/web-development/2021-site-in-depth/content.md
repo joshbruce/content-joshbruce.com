@@ -59,7 +59,7 @@ It's not because the user may not have a browser that supports this type of thin
 
 ### User preferences first
 
-If a user prefers dark color schemes, I want to respect that. Agin, looking at the stylesheet, you'll see a media query that says `preferse-color-scheme`. By default the site uses a light theme and modifies what it needs to in order to go into dark mode.
+If a user prefers dark color schemes, I want to respect that. Agin, looking at the stylesheet, you'll see a media query that says `prefers-color-scheme`. By default the site uses a light theme and modifies what it needs to in order to go into dark mode.
 
 [Firefox](https://www.mozilla.org/en-US/firefox/new/) has some good accessibility tools built in. And I use them to check for contrast, tab order, and other things.
 
@@ -135,6 +135,8 @@ My general rule for the site is that content should not be more than 3 levels de
 
 The hash signs (#) are links directly to that header. If you click it and share that URL, the person you're sending it too will come straight to that headline, if it's available.
 
+I also have a ticket to add the tags necessary to support the social cards as well, just not a hight priority at the moment. (You know, you share a link on social media and there's a fancy card presented.)
+
 ## Content is still king
 
 I appreciate the design department at Apple. (I also appreciate other departments, but we'll stick with marketing and design.) When you go to their website, there is no question what they want you to do and look at: the products.
@@ -156,4 +158,8 @@ The design reenforces this; in my opinion.
 Right now the code and content is all stored on GitHub. I've cloned them to the server. My code editor has a terminal and let's me automatically sign into my remote server. two commands and a password later, the site's pretty much updated.
 
 Eventually I'm looking to add a script that will automatically do the update for me (continuous deployment) but, for now, it's not annoying enough.
+
+It's relatively instant and the site usually isn't down while I do it. Just the changes that were made since the last update are brought over.
+
+Takes less than a second for me to deploy the site and content.
 
