@@ -1,7 +1,7 @@
 ---
 title: Finances
 disclaimer: "I'm not a financial planner or advisor and don't play one on the Internet. This content is for informational and entertainment purposes only and does not constitute advice. Please consult with your financial advisors and financial institutions."
-created: 20210216 
+created: 20210216
 updated: 20210528
 ---
 
@@ -13,7 +13,7 @@ The following sections begin with my personal values, principles, practices, and
 
 ## Values
 
-1. Autonomy: When I do the [Motivators exercise](/highest-version-of-the-self/motivators) on myself, the ability to "choose my own adventure" ranks second; every time.
+1. Autonomy: When I do the [Motivators exercise](/design-your-life/motivators) on myself, the ability to "choose my own adventure" ranks second; every time.
 2. Index funds over managed funds; index or mutual funds over individual stocks and bonds.
 3. My values and principles over social norms and mores.
 4. Intellectual legacy over financial legacy over genetic legacy.
