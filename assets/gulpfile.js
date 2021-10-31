@@ -22,21 +22,21 @@ gulp.task("sass", (done) => {
   const pluginsMinify = [csso({ forceMediaMerge: false })];
 
   gulp
-    .src('styles/sass/main.scss')
+    .src('css/sass/main.scss')
     .pipe(sourcemaps.init({ largeFile: true }))
     .pipe(
       sass({ outputStyle: "expanded" })
       .on("error", () => { console.log('ERROR: while compiling Sass') }))
     .pipe(postcss(pluginsProcess))
-    .pipe(gulp.dest("./styles"))
+    .pipe(gulp.dest("./css"))
     .pipe(postcss(pluginsMinify))
     .pipe(rename({suffix: ".min"}))
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("./styles"));
+    .pipe(gulp.dest("./css"));
   done();
 });
 
 gulp.task("watch", () => {
-  gulp.watch("styles/**/*.scss", gulp.series("sass"));
+  gulp.watch("css/**/*.scss", gulp.series("sass"));
   return;
 });

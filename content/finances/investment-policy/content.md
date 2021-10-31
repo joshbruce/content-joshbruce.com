@@ -12,25 +12,35 @@ I started with the outline developed by [The White Coat Investor](https://www.wh
 
 ## Financial goals
 
-In keeping with the [meet in the middle](/finances) practice, I want to reverse engineer from the least acceptable to most acceptable retirement ages that are both most likely. 
+In keeping with the [meet in the middle](/finances) practice, I want to reverse engineer from the least acceptable to most acceptable retirement ages that are both most likely.
 
-For me, this is what I came to; how and why explanation will come later.
-
-|Starting age |Acceptable retirement age |Age when achieved |Starting portfolio balance | Coast FIRE number |
-|:-:|:-:|:-:|-:|-:|
-|41 |67 |43 |$47,000 |$155,034 |
-|43 |65 |44 |$155,034 |$170,925 |
-|44 |60 |46 |$170,925 |$229,056 |
-|46 |55 |48 |$229,056 |$322,304 |
-|48 |50 |50* |$322,304 |$453,515 |
-
-This gives me five Coast FIRE numbers and one FIRE number:
+This gives me what I refer to as a Coast FI stack. Five Coast FI numbers with decreasing retirement ages, up until the point that the age I should be able to achieve the number corresponds (roughly) with the retirement:
 
 - Coast FI 1: $155,034
+	1. Starting at age: 41
+	2. Achieved by age: 43
+	3. Retire by age: 67
+	4. Starting balance of: $47,000
 - Coast FI 2: $170,925
+	1. Starting at: 43
+	2. Achieved by: 44
+	3. Retire by: 65
+	4. Starting balance of: $155,034
 - Coast FI 3: $220,056
+	1. Starting at: 44
+	2. Achieved by: 46
+	3. Retire by: 60
+	4. Starting balance of: $170,925
 - Coast FI 4: $322,304
+	1. Starting at: 46
+	2. Achieved by: 48
+	3. Retire by: 55
+	4. Starting balance of: $229,056
 - Coast FI 5: $453,515
+	1. Starting at: 48
+	2. Achieved by: 50
+	3. Retire by: 50<sup>*</sup>
+	4. Starting balance of: $322,304
 - FIRE: $500,000
 
 ### Details
@@ -39,11 +49,11 @@ I created this using a Coast FI calculator. Coast FI is the amount of money you 
 
 I used the [Coast FI calculator from Wallet Burst](https://walletburst.com/tools/coast-fire-calc/) (I can’t speak to the quality of content on the rest of the site, but I appreciated the calculator).
 
-I chose a growth rate of **8%**, which might be considered conservative for the market in general. I chose an inflation rate of **3%**, which is the average for the last 100 years and higher than any given year from 2010 to 2021. I used the rule of thumb for a safe withdrawal rate of **4%**, which hypothesizes that you can draw down your net worth by 4% each year and live off those investments alone for around 30 years, at least. 
+I chose a growth rate of **8%**, which might be considered conservative for the market in general. I chose an inflation rate of **3%**, which is the average for the last 100 years and higher than any given year from 2010 to 2021. I used the rule of thumb for a safe withdrawal rate of **4%**, which hypothesizes that you can draw down your net worth by 4% each year and live off those investments alone for around 30 years, at least.
 
 My current total lifestyle cost is roughly $17,760 and I used **$20,000** to give myself a bit of a raise. I still don’t have a normal year’s worth of data to confirm this specific dollar amount. Also, this is total cost of lifestyle, not income. As of August 2021 my expenses were at 19,000 USD, however, 2021 is an outlier year given things I’ve purchased and paid for in full as it were.
 
-I set the monthly contributions to **$4,000**, which is somewhat optimistic and will be adjusted if month-after-month I'm not able to achieve that amount. With that said, these numbers do not include 401(k) contributions made along the way beyond the initial net worth at 41. 
+I set the monthly contributions to **$4,000**, which is somewhat optimistic and will be adjusted if month-after-month I'm not able to achieve that amount. With that said, these numbers do not include 401(k) contributions made along the way beyond the initial net worth at 41.
 
 This data can be used to generate a static [.FIRE](financial independence retire early) number: `total lifestyle cost * 25`. My FIRE number is $500,000.
 
@@ -76,11 +86,11 @@ Notice each of these are aligned with my financial [values, principles, and prac
 
 Investments will be in three brokerage accounts:
 
-- Roth IRA: 
-	- post-tax going in (taxes are paid), 
-	- tax-exempt while growing, and 
+- Roth IRA:
+	- post-tax going in (taxes are paid),
+	- tax-exempt while growing, and
 	- tax-exempt on withdrawal.
-- Tax-deferred (traditional IRA-like): 
+- Tax-deferred (traditional IRA-like):
 	- potentially pre-tax going in (I make too much annually to qualify),
 	- tax-exempt while growing, and
 	- taxed on withdrawal.
@@ -144,7 +154,7 @@ Most of my emergency fund will use revolving loans; I'm sure someone's head some
 
 I also have a wide definition of "cash" when it comes to this emergency fund; in short, cash means I can get my hands on it within 5 days and it is earmarked for short-term needs (one year or less).
 
-Anywhere from 1 to 2 months in traditional savings and checking accounts. Another 2 to 3 months in a tax-exempt bond fund. Insurance deductibles in an equities portfolio designed to earn dividends, have a yield greater than 3 percent, and afford me the opportunity to vote on matters presented to owners; dividends will be moved elsewhere. 
+Anywhere from 1 to 2 months in traditional savings and checking accounts. Another 2 to 3 months in a tax-exempt bond fund. Insurance deductibles in an equities portfolio designed to earn dividends, have a yield greater than 3 percent, and afford me the opportunity to vote on matters presented to owners; dividends will be moved elsewhere.
 
 Replacement costs for tools like cellphone, laptop, and the like will be saved over time. The tool will only be replaced if the current one no longer serves or the new one will bring as much joyful utility as the current one.
 

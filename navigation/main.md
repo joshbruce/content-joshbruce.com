@@ -1,6 +1,6 @@
 ---
 navigation: [
-	/ home, [
+	/ Josh Bruce, [
 		/finances Finances,
 		/finances/investment-policy Investment policy,
 		/finances/building-wealth-paycheck-to-paycheck Paycheck to paycheck

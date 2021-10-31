@@ -22,13 +22,16 @@ On the days when we weren't playing games and just chatting we would discuss exi
 To which I would like to turn to [David Bowie](https://www.azlyrics.com/lyrics/davidbowie/changes.html):
 
 > And these children that you spit on
+>
 > As they try to change their worlds
+>
 > Are immune to your consultations
+>
 > They're quite aware of what they're going through
 
 And, if you're not into that one, [Sophie Scholl](https://en.wikipedia.org/wiki/Sophie_Scholl) of the White Rose was 21 when she was executed for high treason against the Nazi Party; her brother was only 25.
 
-In fact, ageism was often a topic of discussion at these gatherings. 
+In fact, ageism was often a topic of discussion at these gatherings.
 
 Anyhoo.
 
