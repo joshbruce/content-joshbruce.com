@@ -9,3 +9,5 @@ Anyone may [contribute to](https://github.com/joshbruce/content-joshbruce.com/bl
 You may interact with and [sponsor](https://github.com/sponsors/joshbruce) this project through GitHub using the sponsor link, the discussion and issues tabs, and contributing directly.
 
 You can also find me [@itsjoshbruce](https://twitter.com/ItsJoshBruce) on Twitter.
+
+The code used to run the site if [over here](https://github.com/8fold/site-joshbruce.com).
