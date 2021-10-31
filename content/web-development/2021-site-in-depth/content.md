@@ -151,3 +151,9 @@ Navigation, copyright and other legal, along with support and social (coming soo
 
 The design reenforces this; in my opinion.
 
+## Deploying updates
+
+Right now the code and content is all stored on GitHub. I've cloned them to the server. My code editor has a terminal and let's me automatically sign into my remote server. two commands and a password later, the site's pretty much updated.
+
+Eventually I'm looking to add a script that will automatically do the update for me (continuous deployment) but, for now, it's not annoying enough.
+
