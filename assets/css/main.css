@@ -33,8 +33,8 @@
   --1-px:1px;
   --400-px:400px;
   --icon-new-window:"⧉";
-  --icon-increase:"⬆";
-  --icon-decrease:"⬇";
+  --icon-increase:"◭";
+  --icon-decrease:"⧩";
   --icon-hold:"≅";
   --icon-lift-spacer:-0.5rem;
   --margin-centered:var(--0-spacer) var(--auto);
@@ -70,6 +70,39 @@ body{
   font-size:var(--m-font);
   line-height:var(--m-line-height);
   font-weight:var(--light-font);
+}
+body > a{
+  position:var(--relative);
+  text-align:var(--center);
+  font-size:var(--s-font);
+  display:var(--block);
+  margin:var(--l-spacer);
+  font-weight:var(--light-font);
+  padding:var(--m-spacer);
+}
+body > a[id=content-top]:before{
+  display:var(--inline-block);
+  content:var(--icon-decrease);
+  position:var(--absolute);
+  left:var(--0-spacer);
+}
+body > a[id=content-top]:after{
+  display:var(--inline-block);
+  content:var(--icon-decrease);
+  position:var(--absolute);
+  right:var(--0-spacer);
+}
+body > a[id=go-to-top]:before{
+  display:var(--inline-block);
+  content:var(--icon-increase);
+  position:var(--absolute);
+  left:var(--0-spacer);
+}
+body > a[id=go-to-top]:after{
+  display:var(--inline-block);
+  content:var(--icon-increase);
+  position:var(--absolute);
+  right:var(--0-spacer);
 }
 
 a:hover{

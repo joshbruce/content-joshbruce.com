@@ -10,6 +10,8 @@ navigation: [
 	], [
 	    /software-development Software development,
 	    /software-development/why-dont-you-use Why don't you use
+	], [
+		/web-development Web development
 	]
 ]
 ---

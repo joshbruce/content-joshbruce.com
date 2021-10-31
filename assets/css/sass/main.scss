@@ -40,8 +40,8 @@
   --400-px: 400px;
 
   --icon-new-window: "⧉";
-  --icon-increase: "⬆";
-  --icon-decrease: "⬇";
+  --icon-increase: "◭";
+  --icon-decrease: "⧩";
   --icon-hold: "≅";
   --icon-lift-spacer: -0.5rem;
 
@@ -79,6 +79,48 @@ body {
   font-size: var(--m-font);
   line-height: var(--m-line-height);
   font-weight: var(--light-font);
+
+  & > a {
+    position: var(--relative);
+    text-align: var(--center);
+    font-size: var(--s-font);
+    display: var(--block);
+    margin: var(--l-spacer);
+    font-weight: var(--light-font);
+    padding: var(--m-spacer);
+
+    &[id="content-top"] {
+      &:before {
+        display: var(--inline-block);
+        content: var(--icon-decrease);
+        position: var(--absolute);
+        left: var(--0-spacer);
+      }
+
+      &:after {
+        display: var(--inline-block);
+        content: var(--icon-decrease);
+        position: var(--absolute);
+        right: var(--0-spacer);
+      }
+    }
+
+    &[id="go-to-top"] {
+      &:before {
+        display: var(--inline-block);
+        content: var(--icon-increase);
+        position: var(--absolute);
+        left: var(--0-spacer);
+      }
+
+      &:after {
+        display: var(--inline-block);
+        content: var(--icon-increase);
+        position: var(--absolute);
+        right: var(--0-spacer);
+      }
+    }
+  }
 }
 
 a:hover {
