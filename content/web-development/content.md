@@ -24,6 +24,8 @@ Now, to be fair, that doesn't include the supporting players, if you will. The p
 
 I'd say that's pretty "low-code."
 
+You can read more about the 2021 update [over here](/web-development/2021-site-in-depth).
+
 ## And before
 
 This is the brain-dump history. You've been warned. (All the years are rough.)

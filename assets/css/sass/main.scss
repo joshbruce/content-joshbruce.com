@@ -65,10 +65,6 @@
   --hidden: hidden;
 }
 
-html {
-  scroll-behavior: var(--smooth); // not available in Safari - graceful degradation
-}
-
 body {
   min-height: var(--vw-0);
   max-width: var(--line-length);
@@ -219,6 +215,13 @@ h6 {
 main, article {
   padding: var(--0-spacer) var(--m-spacer);
   padding-top: var(--m-spacer);
+
+  img {
+    display: var(--block);
+    margin: var(--margin-centered);
+    width: 80%;
+    border: 3px solid var(--gray-darker);
+  }
 }
 
 nav > ul {
@@ -252,6 +255,10 @@ nav > ul {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: var(--smooth); // not available in Safari - graceful degradation
+  }
+
   nav > ul a {
     &:after {
       content: '';
@@ -294,6 +301,13 @@ nav > ul {
   nav > ul a:after {
     border-top: var(--1-px) var(--solid) var(--gray-lightest);
   }
+
+  main, article {
+    img {
+      border: 3px solid var(--gray-lightest);
+    }
+  }
+
 }
 
 blockquote {
