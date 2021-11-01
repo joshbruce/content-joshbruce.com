@@ -15,7 +15,7 @@ I've had two regular jobs as a web developer. In both cases, every problem or si
 
 [Maslow's Hammer](https://en.wikipedia.org/wiki/Law_of_the_instrument) was in full effect and still kinda is. Turning a technology (the web) designed to be accessible to the "commoner" into something requiring complex, advanced knowledge. 
 
-From this desire to make the web accessible to more people so they could create their own content saw a boom in platforms where those who didn't want to learn the syntax of HTML and the technology of transferring files could post their own content. [Twitter](https://twitter.com), [Facebook](https://www.facebook.com), [MySpace](https://myspace.com), [LinkeIn](https://www.linkedin.com) and other social media platforms started dominating the landscape. Of course, many of these came after the push by developers to create software the "commoner" could install on their own servers to generate their sites; [WordPress](https://wordpress.org), [TextPattern](https://textpattern.com), [Movable Type](https://www.movabletype.com), and countless others.
+This desire to make the web accessible to more people so they could create their own content saw a boom in platforms where those who didn't want to learn the syntax of HTML and the technology of transferring files could post their own content. [Twitter](https://twitter.com), [Facebook](https://www.facebook.com), [MySpace](https://myspace.com), [LinkeIn](https://www.linkedin.com) and other social media platforms started dominating the landscape. Of course, many of these came after the push by developers to create software the "commoner" could install on their own servers to generate their sites; [WordPress](https://wordpress.org), [TextPattern](https://textpattern.com), [Movable Type](https://www.movabletype.com), and countless others.
 
 There seems to be a resurgence of platforms and applications coming in now as the technologies have stagnated or the ethics of the creators is being challenged.
 
@@ -27,21 +27,9 @@ Don't get me wrong, I'm not a very command-control person, in fact, quite the op
 
 ## Solving my own problems
 
-In the name of transparency, I technically do use a framework: [Laravel](https://laravel.com). The thing is I don't actually use a lot of Laravel's features.
+As of the [2021 build](/web-development/2021-site-in-depth) of this site, I no longer use [Laravel](https://laravel.com); for reasons described in [this article](/web-development). In short, I didnt use a lot of the features provided by Laravel.
 
-I don't use a database, that's one dependency out of the way. I use a flat-file system, which is to say I write the content in a Markdown editor; decouples content from the presentation.
-
-I don't use contact forms, comments, or similar methods for you, the reader, to reach out to me; instead, I'll most likely point you to social media platforms or my direct email address to have the discussion.
-
-I don't use [Blade templates](https://laravel.com/docs/8.x/blade#introduction) for the presentation of content; instead, I use the Markup libraries I wrote, one for [PHP](https://github.com/8fold/php-markup) in general and one for [Laravel](https://github.com/8fold/laravel-markup).
-
-I don't have an admin panel where I need to sign in; instead, I use what amounts to [.FTP](File Transfer Protocol) to publish new content.
-
-Basically, I use Laravel's router, service providers, and ability to bootstrap and respond quickly.
-
-Everything else is some type of custom code I wrote to solve specific problems as they arose.
-
-I don't use trackers or analytics that can keep tabs on my visitors; I don't care how old you are (for the most part) or any other demographic information. Actually, for the most part, I avoid analytics altogether because it could slow down your experience, even the one I wrote that's pretty darn fast.
+I don't use trackers or analytics that can keep tabs on my visitors; I don't care how old you are (for the most part) or any other demographic information. Actually, for the most part, I avoid analytics altogether because it could slow down your experience, even the one I wrote.
 
 The Internet is fast. We're just not building like we had to back in the day when it was literally slow.
 
@@ -76,16 +64,16 @@ The two big things I didn't want were:
 
 That's when I came to the three content type model. 
 
-## De-coupling
+## Decoupling
 
 The longer you let someone or something else do things for you, the more coupled you will become. Something I'm seeing a lot of in the software development space is "modernization" efforts.
 
 Moving clients from database A to database B or micro-services instead of monoliths. 
 
-To pick on WordPress again, it used to be that WordPress would create a whole database architecture for you. The more content you created, the more it was tightly coupled to that database architecture and, by extension, to WordPress. It got to the point that many of the other content management applications had scripts that would perform database migrations from WordPress (or other other popular tools). 
+To pick on WordPress again, it used to be that WordPress would create a whole database architecture for you (don't know if that's still the case). The more content you created, the more it was tightly coupled to that database architecture and, by extension, to WordPress. It got to the point that many of the other content management applications had scripts that would perform database migrations from WordPress (or other popular tools). 
 
 Of course, you're basically getting a divorce and immediately remarrying someone else with similar baggage.
 
-As I've mentioned, this site doesn't use a database, it uses the file system; kind of like a traditional website build from 1998 or, if you're into static website generators, it's like that from a content perspective. From a presentation perspective, there are a few hundred lines of site-specific code I maintain. For the most part they're plain PHP or using libraries I also write and maintain in a similar "only solve problems you have" spirit. So, if I decide to decouple from Laravel, I can do it pretty easily. In fact, I can even go old-school dynamic PHP site if I want.
+As of this writing, this site doesn't use a database, it uses the file system; kind of like a traditional website build from 1998 or, if you're into static website generators, it's like that from a content perspective. From a presentation perspective, there are a few hundred lines of site-specific code I maintain. For the most part they're plain PHP or using libraries I also write and maintain in a similar "only solve problems you have" spirit.
 
-The most annoying part for me right now is getting all my content wrangled back into this site. Beyond that, it's just leveraging what the Internet is good for. Receiving requests and returning bit steams; mostly in the form of plain-text.
+The most annoying part for me right now is getting all my content wrangled back into this site. Beyond that, the site's just leveraging what the Internet is good for. Receiving requests and returning bit steams; mostly in the form of plain-text.
