@@ -185,7 +185,7 @@ Fine, no JS-related stuff in the HTML.
 
 <script async src="https://jsfiddle.net/joshbruce/72hp0jfm/embed/"></script>
 
-Brings us to about 100 characters for the HTML ([.1kb](one kilobyte)). About 500 for the JS ([4kb](four kilobytes)). 663 all together or [5kb](five kilobytes) still. So, time to first paint on a 14.4[.kbps](kilobytes per second) modem is ~0.1 seconds. Time to first interaction is ~0.3 seconds.
+Brings us to about 100 characters for the HTML ([.1kb](one kilobyte)). About 500 for the JS ([.4kb](four kilobytes)). 663 all together or [.5kb](five kilobytes) still. So, time to first paint on a 14.4[.kbps](kilobytes per second) modem is ~0.1 seconds. Time to first interaction is ~0.3 seconds.
 
 We've made it almost three times larger than iteration 4, without adding any new functionality. But, at least we don't have anything related to JS in the HTML. (It's important and difficult to properly phrase and apply constraints.)
 
@@ -300,7 +300,7 @@ Stay as small as possible. When it becomes too painful to reason about. Make it 
 
 Anyway…
 
-Back to reasons HTML is still around…ummmmm…oh…right…there wouldn't be an internet [.UI](user interface) without it.
+Back to reasons HTML is still around…ummmmm…oh…right…there wouldn't be an internet UI without it.
 
 There also wouldn't be the Apple UI, it uses [.XML](eXtensible Markup Language) too. There wouldn't be the Android UI. There wouldn't be SVG. There wouldn't be NativeScript. There wouldn't be a lot of stuff when it comes to user interfaces without HTML and all of its XML-based cousins. What we don't like is writing it. That's why no one celebrates or knows most UIs are XML-based; we've put layers of abstraction and technology over it to try and hide it so people won’t have to write it (MS Frontpage 2000, baby, that's what I used back in the day). 
 
