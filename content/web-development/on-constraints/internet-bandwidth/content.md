@@ -247,7 +247,7 @@ The code itself probably took 20 minutes; with all the iterations. Factor in uni
 
 But, "I'm not a designer" is the retort I hear most…
 
-"Then you have 7 hours to practice and become more cross-functional and learn a new skill…become more 'full-stack'," is the counter I will offer, with sincere love and respect for all that you are; after-all I still say I'm not "developer" because I really like "designing" things; so, I make development go faster to spend more time thinking and designing new things instead of continuing to complicate what's already there.
+"Then you have 7 hours to practice and become more cross-functional and learn a new skill…become more 'full-stack'," is the counter I will offer, with sincere love and respect for all that you are; after-all I still say I'm not a "developer" because I really like "designing" things; so, I make development go faster to spend more time thinking and designing new things instead of continuing to complicate what's already there.
 
 Thanks for letting me get that off my chest. I really do appreciate it.
 
@@ -258,7 +258,7 @@ Seriously though. We were done with the requirements at the 4th iteration.
 - 244 characters of HTML: 2k
 - 100 character of CSS: 1k
 - 300 characters of JS: 2k
-- Roughly 0.3 seconds as 14kbs
+- Roughly 0.3 seconds at 14kbs
 
 So small that the sky's almost the limit on what we could add visually.
 
@@ -270,9 +270,11 @@ Bears repeating and overemphasizing.
 
 Now we're at ~7kb with no new features for the users. No added benefit for our Nigerian friend (we've actually made her experience slower). And we have an application with 4 buttons (that appear by "magic" to the layman). And the buttons turn a counter…seriously?
 
-I could have made this solution way more complicated though, trust me - just look at [left-pad](https://github.com/left-pad/left-pad), all it does is add a character to the beginning of a string (and it's broken in two use cases). This capability is now native to JS; thereby, making the package wholly unnecessary, yet it still gets half-a-million downloads a month. What are we doing, web developers…seriously?
+I could have made this solution way more complicated though, trust me—just look at [left-pad](https://github.com/left-pad/left-pad), it adds a character to the beginning of a string, is broken in two use cases, and is now JS-native functionality. The original author tried to take it down and broke the Internet. The package is marked as deprecated and the repository is archived. Left pad still gets almost 3 million downloads a week.
 
-To top it all off, Bob Martin, Pragmatic Dave Thomas, or Kevlin Henney will show up tomorrow and manage to do what I did with half the code without having to know the requirements.
+What are we doing, web developers…seriously?
+
+To top it all off, Bob Martin, Pragmatic Dave Thomas, or Kevlin Henney will show up tomorrow and manage to do what I did with half the code, in half the time, and without having to know the requirements.
 
 But, sticking to our constraint of:
 
@@ -280,13 +282,11 @@ But, sticking to our constraint of:
 
 I literally could not unintentionally make this more complex and complicated.
 
-I would have had to start with trying to build the fifth iteration first (though I did have an idea or vision, of it, just didn't force it). Begin with the end in mind, is not the same as trying to begin at the end.
+I would have had to start with trying to build the fifth iteration first (though I did have an idea or vision of it, I just didn't force it). Beginning with the end in mind, is not the same as trying to begin at the end.
 
-What could have been the "final" solution (iteration 4), didn't have to parse the HTML (DOM) with JS to find the buttons (could leave the JS in the head of the document because it was purely functional and the button managed its own state). Didn't have to "wait, or verify, the DOM had finished loading".
+What could have been the "final" solution (iteration 4), didn't have to use JS to parse the HTML ([.DOM](document object model)) to find the buttons (could leave the JS in the head of the document because it was purely functional and the button managed its own state). Didn't have to wait, or verify, the DOM had finished loading.
 
-JS not loaded yet, ummmmm…not really possible, because it's in the head, which gets loaded first anyway.
-
-Don't get me wrong, there are times where it can get a little messy in the HTML if you keep putting everything inside the individual HTML elements; thereby, treating HTML like a first class citizen in the Internet ecosystem instead of some arcane, legacy troll in the basement to be acted upon by other things that we have to keep around because reasons…but that's the point of the constraint.
+Don't get me wrong, there are times where it can get a little messy in the HTML if you keep putting everything inside the individual elements; thereby, treating HTML like a first class citizen in the Internet ecosystem instead of some arcane, legacy troll in the basement to be acted upon by other things…but that's the point of the constraint.
 
 Stay as small as possible. When it becomes too painful to reason about. Make it smaller, by moving things somewhere else.
 
@@ -296,15 +296,19 @@ Stay as small as possible. When it becomes too painful to reason about. Make it 
 
 "None."
 
-"Right. How hard is it send 3kb over an internet connection? How many servers will you need to handle the 5,000 users you don't have?"
+"Right. How hard is it to send 3kb over an internet connection? How many servers will you need to handle the 5,000 users you don't have?"
 
 Anyway…
 
-Back to reasons HTML is still around…ummmmm…oh…right…there wouldn't be an internet UI without it.
+Back to reasons HTML is still around…ummmmm…oh…right…there wouldn't be an internet [.UI](user interface) without it.
 
-There also wouldn't be the Apple UI, it uses XML too. There wouldn't be the Android UI. There wouldn't be SVG. There wouldn't be NativeScript. There wouldn't be a lot of stuff when it comes to user interfaces without HTML and all of its XML-based cousins. What we don't like is writing it. That's why no one knows this is the case…we've put layers of abstraction and technology over it to try and hide it and make it so people don't have to write (MS Frontpage 2000, baby, that's what I used). Unfortunately, they still kinda suck, almost 20 years later. Therefore, if you care about craftsmanship, you're still writing most of it by hand; or, your product has already incrementally scaled over the course of a decade, I'm looking at you Facebook.
+There also wouldn't be the Apple UI, it uses [.XML](eXtensible Markup Language) too. There wouldn't be the Android UI. There wouldn't be SVG. There wouldn't be NativeScript. There wouldn't be a lot of stuff when it comes to user interfaces without HTML and all of its XML-based cousins. What we don't like is writing it. That's why no one celebrates or knows most UIs are XML-based; we've put layers of abstraction and technology over it to try and hide it so people won’t have to write it (MS Frontpage 2000, baby, that's what I used back in the day). 
 
-"You get it? Ogres have layers!" And HTML is the deepest layer when it comes to UI development for the web, and its parent XML, is the deepest layer for just about every UI you interact with.
+Unfortunately, tools that write it for you still kinda suck, almost 20 years later. Therefore, if you care about craftsmanship, you're still writing most of it by hand; or, your product has already incrementally scaled over the course of a decade, I'm looking at you Facebook.
+
+> You get it? Ogres have layers!
+
+HTML is the deepest layer when it comes to UI development for the web, and its parent XML, is the deepest layer for just about every UI you interact with.
 
 To beat the horse dead (too late), remember the constraint:
 
