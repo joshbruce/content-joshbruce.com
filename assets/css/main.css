@@ -2,6 +2,7 @@
 :root{
   --header-font:"Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   --body-font:"Open Sans", "Helvetica Neue", Verdana, sans-serif;
+  --code-font:Consolas, monaco, monospace;
   --x-bold-font:600;
   --bold-font:500;
   --medium-font:300;
@@ -31,6 +32,8 @@
   --2xs-spacer:0.25rem;
   --3xs-spacer:0.1rem;
   --1-px:1px;
+  --2-px:2px;
+  --3-px:3px;
   --400-px:400px;
   --icon-new-window:"⧉";
   --icon-increase:"◭";
@@ -175,6 +178,17 @@ h6{
   text-align:var(--center);
 }
 
+hr{
+  width:33%;
+  border:var(--2-px) var(--solid) var(--gray-darkest);
+  border-radius:var(--1-px);
+}
+
+code{
+  font-family:var(--code-font);
+  font-size:var(--s-font);
+}
+
 .toc{
   padding:var(--none);
   list-style:var(--none);
@@ -205,11 +219,16 @@ main, article{
   padding:var(--0-spacer) var(--m-spacer);
   padding-top:var(--m-spacer);
 }
-main img, article img{
+main img,
+main iframe[src*="https://jsfiddle.net"], article img,
+article iframe[src*="https://jsfiddle.net"]{
   display:var(--block);
   margin:var(--margin-centered);
   width:80%;
-  border:3px solid var(--gray-darker);
+  border:var(--3-px) var(--solid) var(--gray-darker);
+}
+main iframe[src*="https://jsfiddle.net"], article iframe[src*="https://jsfiddle.net"]{
+  min-height:300px;
 }
 
 nav > ul{
@@ -265,6 +284,10 @@ nav > ul a{
     font-weight:var(--medium-font);
   }
 
+  hr{
+    border:1px solid var(--gray-lightest);
+  }
+
   a{
     color:var(--key-light);
     font-weight:var(--x-bold-font);
@@ -281,7 +304,9 @@ nav > ul a{
     border-top:var(--1-px) var(--solid) var(--gray-lightest);
   }
 
-  main img, article img{
+  main img,
+main iframe[src*="https://jsfiddle.net"], article img,
+article iframe[src*="https://jsfiddle.net"]{
     border:3px solid var(--gray-lightest);
   }
 }
