@@ -12,7 +12,8 @@ navigation: [
 	    /software-development/why-dont-you-use Why don't you use
 	], [
 		/web-development Web development,
-		/web-development/on-constraints On constraints
+		/web-development/on-constraints On constraints,
+		/refactoring-re-engineering-and-rebuilding Refactoring, re-engineering, and rebuilding
 	]
 ]
 ---
