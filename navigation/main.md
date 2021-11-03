@@ -13,7 +13,7 @@ navigation: [
 	], [
 		/web-development Web development,
 		/web-development/on-constraints On constraints,
-		/refactoring-re-engineering-and-rebuilding "Refactoring, re-engineering, and rebuilding"
+		/refactoring-re-engineering-and-rebuilding Refactoring\, re-engineering\, and rebuilding
 	]
 ]
 ---
