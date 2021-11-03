@@ -6,7 +6,7 @@ updated: 20211031
 
 I differentiate software development from [web development](/web-development) in the sense that all web development is software development but not all software development is web development. Web development is software development in a specific context, with contextual constraints.
 
-I think I wrote my first line of code in the late [.ʼ80s](nineteen eighties) using [Logo](https://en.wikipedia.org/wiki/Logo_(programming_language)). Did it again in the mid- to late-nineties; only this time it was animated and made sound. In 1998 I made my first website.
+I think I wrote my first line of code in the late [.ʼ80s](nineteen eighties)  using [Logo](https://en.wikipedia.org/wiki/Logo_(programming_language)). Did it again in the mid- to late-nineties; only this time it was animated and made sound. In 1998 I made my first website.
 
 In the beginning I never said I was a developer; most times I still say I'm not. Back then I was strictly drag-and-drop.
 
