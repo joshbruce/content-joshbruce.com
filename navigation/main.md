@@ -9,7 +9,7 @@ navigation: [
 		/design-your-life/motivators Motivators
 	], [
 	    /software-development Software development,
-	    /software-development/why-dont-you-use Why don't you use
+	    /software-development/why-dont-you-use Why donʼt you use
 	], [
 		/web-development Web development,
 		/web-development/on-constraints On constraints,
