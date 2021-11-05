@@ -55,11 +55,11 @@ Therefore, I want to be considerate of that. In the [style sheet](/assets/css/ma
 
 We might call this: reduced-motion-first design.
 
-It's not because the user may not have a browser that supports this type of things, it might just be they don't do well with it and would be annoyed to the point of bailing.
+It's not because the user may not have a browser that supports this type of thing, it might just be they don't do well with it and would be annoyed to the point of bailing.
 
 ### User preferences first
 
-If a user prefers dark color schemes, I want to respect that. Agin, looking at the stylesheet, you'll see a media query that says `prefers-color-scheme`. By default the site uses a light theme and modifies what it needs to in order to go into dark mode.
+If a user prefers dark color schemes, I want to respect that. Again, looking at the style sheet, you'll see a media query that says `prefers-color-scheme`. By default the site uses a light theme and modifies what it needs to in order to go into dark mode.
 
 [Firefox](https://www.mozilla.org/en-US/firefox/new/) has some good accessibility tools built in. And I use them to check for contrast, tab order, and other things.
 
@@ -101,7 +101,7 @@ The screenshots above are in the [.PNG](Portable Network Graphics) format, which
 
 My server will also compress certain file types before they are transferred to you. Because my host handles this for me it means there's no additional overhead for me.
 
-One of these files should be the CSS. Since switching to using CSS properties almost exclusively to define my "design system," I've notice a slight improvement when the CSS is compressed. Once you receive the compressed file, it will be uncompressed and displayed for you. This all happens automatically.
+One of these files that gets compressed before being sent should be the CSS. Since switching to using CSS properties almost exclusively to define my "design system," I've noticed a slight improvement when the CSS is compressed. Once you receive the compressed file, it will be uncompressed and displayed for you. This all happens automatically.
 
 Because I use the libraries I do for generating the HTML, it's actually minified, which is to say stripped of extra whitespace that's used to make it easier to read. For a non-HTML example, look at the [minified version](/assets/css/main.min.css) of the CSS served with this page; as opposed to the [non-minified version](/assets/css/main.css) I've been linking to up to this point. If you look at the raw HTML source for this page, you'll notice it's mostly one continuous line of text.
 
@@ -117,7 +117,7 @@ Basically, our modern web development code is a helicopter parent on the defensi
 
 When client-side application development started gaining steam (and even back in the Flash days), the mantra was: Don't break the back button.
 
-This was because developers were using JS to interpret address (route or header) requests and not respecting the browser page stack. You navigate a few times, then hit the browser back button and lose all the progress up to that point. Did that cause these developers to stop breaking the back?
+This was because developers were using JS to interpret address (route or header) requests and not respecting the browser page stack. You navigate a few times, then hit the browser back button and lose all the progress up to that point. Did that cause these developers to stop breaking the back button?
 
 For some, sure, but others just created their own duplication of the browser navigation (back, forward, and even refresh)…thereby replacing and taking on the burden of writing a browser as well as a web application.
 

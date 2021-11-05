@@ -7,7 +7,7 @@ Someone mentioned the word "refactoring" the other day. Someone else said, "Let'
 
 This got me thinking.
 
-Language is very interesting. I hold that the words we use to describe things can often fail to grasp the idea in someone's mind. We are unlimited in our capacity to think and dream; however, we are limited in our vocabulary to describe—no one knows *all* the words.
+Language is interesting. I hold that the words we use to describe things can often fail to grasp the idea in someone's mind. We are unlimited in our capacity to think and dream; however, we are limited in our vocabulary to describe—no one knows *all* the words.
 
 I had an unabridged, English dictionary once. On the cover it said something like: Over 300,000 words. I took a test once that said my vocabulary was somewhere in the neighborhood of 3,000 words; less than 1 percent of the words in the dictionary.
 

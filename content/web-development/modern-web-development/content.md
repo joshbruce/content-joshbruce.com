@@ -1,6 +1,7 @@
 ---
 title: Modern web development
 created: 20211018
+updated: 20211105
 ---
 
 The term "modern" is an odd one, freighted with baggage. In the context of web development it seems even stranger given that I’m older than the public web.
@@ -66,6 +67,8 @@ Arguably, secure-by-default is becoming an integral part of the web, which chang
 The route is the keystone of the Internet. And I would say this route style and format is the basis of modern web development.
 
 I witnessed this evolution of routes over the course of a few years.
+
+The promise from an HTML-perspective, the promise was [semantic markup](https://www.w3.org/standards/semanticweb/). We still haven't got there though. Many sites I visit still default to using `div` and `span` for block and inline elements outside of content, respectively. Not a lot of `article`, `main`, and `setion`, for example.
 
 ## 1998
 
