@@ -19,24 +19,24 @@ gulp.task("default", (done) => {
  */
 gulp.task("sass", (done) => {
   const pluginsProcess = [discardComments(), autoprefixer()];
-  const pluginsMinify = [csso({ forceMediaMerge: false })];
-
+  const pluginsMinify  = [csso({ forceMediaMerge: false })];
+  const dest           = "./content/assets/css";
   gulp
-    .src('css/sass/main.scss')
+    .src('assets/sass/main.scss')
     .pipe(sourcemaps.init({ largeFile: true }))
     .pipe(
       sass({ outputStyle: "expanded" })
       .on("error", () => { console.log('ERROR: while compiling Sass') }))
     .pipe(postcss(pluginsProcess))
-    .pipe(gulp.dest("./css"))
+    .pipe(gulp.dest(dest))
     .pipe(postcss(pluginsMinify))
     .pipe(rename({suffix: ".min"}))
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("./css"));
+    .pipe(gulp.dest(dest));
   done();
 });
 
 gulp.task("watch", () => {
-  gulp.watch("css/**/*.scss", gulp.series("sass"));
+  gulp.watch("assets/**/*.scss", gulp.series("sass"));
   return;
 });

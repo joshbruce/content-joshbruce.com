@@ -59,6 +59,7 @@
   --left: left;
   --inline-block: inline-block;
   --solid: solid;
+  --dashed: dashed;
   --transparent: transparent;
   --relative: relative;
   --absolute: absolute;
@@ -241,6 +242,11 @@ main, article {
   iframe[src*="https://jsfiddle.net"] {
     min-height: 300px;
   }
+
+  abbr {
+    text-decoration: var(--none);
+    border-bottom: var(--1-px) var(--dashed) var(--gray-darker);
+  }
 }
 
 nav > ul {
@@ -270,6 +276,10 @@ nav > ul {
     overflow: var(--hidden);
     text-align: var(--center);
     position: var(--relative);
+  }
+
+  abbr {
+    border-color: var(--gray-lightest);
   }
 }
 

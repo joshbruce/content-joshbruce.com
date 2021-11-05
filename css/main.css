@@ -50,7 +50,7 @@
   --left:left;
   --inline-block:inline-block;
   --solid:solid;
-  --dashed:dashed;
+  --dotted:dotted;
   --transparent:transparent;
   --relative:relative;
   --absolute:absolute;
@@ -234,7 +234,7 @@ main iframe[src*="https://jsfiddle.net"], article iframe[src*="https://jsfiddle.
 main abbr, article abbr{
   -webkit-text-decoration:var(--none);
           text-decoration:var(--none);
-  border-bottom:var(--1-px) var(--dashed) var(--gray-darker);
+  border:var(--1-px) var(--dotted) var(--gray-darker);
 }
 
 nav > ul{
