@@ -258,6 +258,21 @@ main, article {
       margin-bottom: var(--s-spacer);
     }
   }
+
+  details {
+    border: var(--1-px) var(--solid) var(--key);
+    border-radius: var(--3-px);
+    margin-top: var(--m-spacer);
+    padding: .5em .5em 0;
+    font-weight: var(--bold-font);
+
+    & summary {
+      color: var(--key);
+      cursor: var(--pointer);
+      margin: -.5em -.5em 0;
+      padding: .5em;
+    }
+  }
 }
 
 nav > ul {

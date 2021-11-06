@@ -242,6 +242,19 @@ main dl > dt, article dl > dt{
 main dl > dd, article dl > dd{
   margin-bottom:var(--s-spacer);
 }
+main details, article details{
+  border:var(--1-px) var(--solid) var(--key);
+  border-radius:var(--3-px);
+  margin-top:var(--m-spacer);
+  padding:0.5em 0.5em 0;
+  font-weight:var(--bold-font);
+}
+main details summary, article details summary{
+  color:var(--key);
+  cursor:var(--pointer);
+  margin:-0.5em -0.5em 0;
+  padding:0.5em;
+}
 
 nav > ul{
   margin:var(--0-spacer);

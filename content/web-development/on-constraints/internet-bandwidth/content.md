@@ -78,13 +78,142 @@ All right, I can't have four items, until I have one. I'm doing this on the web;
 
 Here you go (basic [VueJS](https://vuejs.org/v2/guide/components.html) without VueJS, [Angular](https://angular.io/guide/component-overview) components without Angular, [React](https://reactjs.org/docs/react-component.html) components without React, and so on):
 
-<script async src="https://jsfiddle.net/joshbruce/pd8c1aev/18/embed/"></script>
+<div id="code-example-1">
+<button
+  style="
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #50e5db;
+	cursor: pointer;"
+  onclick="
+	var targetValue = parseInt(this.innerHTML) + 1;
+	this.innerHTML = `${targetValue}`;">
+0
+</button>
+
+<details>
+	<summary>HTML (iteration 1)</summary>
+<pre><code>&lt;button
+  style="
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #50e5db;
+	cursor: pointer;"
+  onclick="
+    var targetValue = parseInt(this.innerHTML) + 1;
+    this.innerHTML = `${targetValue}`;">
+0
+&lt;/button>
+</code></pre>
+</details>
+</div>
 
 Everything is in the button element, sticking to our constraint. And it's fully testable without needing anything other than the ability to "click" and the ability to retrieve the value attribute.
 
 And, about a decade or so ago, this would have been the only way to do it. But there's a problem…I need four of them…no problem, just copy and paste (and back-in-the-day you would have to):
 
-<script async src="https://jsfiddle.net/joshbruce/ooazrorc/embed/"></script>
+<div id="code-example-2">
+<button
+  style="
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #50e5db;
+	cursor: pointer;"
+  onclick="
+	var targetValue = parseInt(this.innerHTML) + 1;
+	this.innerHTML = `${targetValue}`;">
+0
+</button>
+<button
+  style="
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #50e5db;
+	cursor: pointer;"
+  onclick="
+	var targetValue = parseInt(this.innerHTML) + 1;
+	this.innerHTML = `${targetValue}`;">
+0
+</button>
+<button
+  style="
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #50e5db;
+	cursor: pointer;"
+  onclick="
+	var targetValue = parseInt(this.innerHTML) + 1;
+	this.innerHTML = `${targetValue}`;">
+0
+</button>
+<button
+  style="
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #50e5db;
+	cursor: pointer;"
+  onclick="
+	var targetValue = parseInt(this.innerHTML) + 1;
+	this.innerHTML = `${targetValue}`;">
+0
+</button>
+
+<details>
+	<summary>HTML (iteration 2)</summary>
+<pre><code>&lt;button
+  style="
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #50e5db;
+	cursor: pointer;
+  onclick="
+    var targetValue = parseInt(this.innerHTML) + 1;
+    this.innerHTML = `${targetValue}`;">
+0
+&lt;/button>
+&lt;button
+  style="
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #50e5db"
+  onclick="
+    var targetValue = parseInt(this.innerHTML) + 1;
+    this.innerHTML = `${targetValue}`;">
+0
+&lt;/button>
+&lt;button
+  style="
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #50e5db"
+  onclick="
+    var targetValue = parseInt(this.innerHTML) + 1;
+    this.innerHTML = `${targetValue}`;">
+0
+&lt;/button>
+&lt;button
+  style="
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #50e5db"
+  onclick="
+    var targetValue = parseInt(this.innerHTML) + 1;
+    this.innerHTML = `${targetValue}`;">
+0
+&lt;/button>
+</code></pre>
+</details>
+</div>
 
 Two problems. One, we're repeating ourselves; thereby, breaking the DRY principle, which unabashedly and probably with full knowledge of its own irony, states: don't repeat yourself.
 
@@ -112,7 +241,56 @@ Get your CSS and JS out of your HTML! Was the rally cry in 2007.
 
 And so we did.
 
-<script async src="https://jsfiddle.net/joshbruce/9286LaLx/embed/"></script>
+<div id="code-example-3">
+<button onclick="increment1(this)">0</button>
+<button onclick="increment1(this)">0</button>
+<button onclick="increment1(this)">0</button>
+<button onclick="increment1(this)">0</button>
+<style type="text/css">
+div#code-example-3 > button {
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #50e5db;
+	cursor: pointer;
+}
+</style>
+<script>
+function increment1(button) {
+  const targetValue = parseInt(button.innerHTML) + 1;
+  button.innerHTML = targetValue;
+}
+</script>
+
+<details>
+	<summary>HTML (iteration 3)</summary>
+<pre><code>&lt;button onclick="increment(this)">0&lt;/button>
+&lt;button onclick="increment(this)">0&lt;/button>
+&lt;button onclick="increment(this)">0&lt;/button>
+&lt;button onclick="increment(this)">0&lt;/button>
+</code></pre>
+</details>
+
+<details>
+<summary>CSS (iteration 3)</summary>
+<pre><code>button {
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #50e5db;
+}
+</code></pre>
+</details>
+
+<details>
+<summary>JavaScript (iteration 3)</summary>
+<pre><code>function increment(button) {
+  const targetValue = parseInt(button.innerHTML) + 1;
+  button.innerHTML = targetValue;
+}
+</code></pre>
+</details>
+</div>
 
 And this, I fear is how things start getting complicated to keep track of.
 
@@ -125,7 +303,76 @@ Still independently testable (though we might not need to write automated tests 
 
 One other requirement to satisfy. We need to display the total score somewhere on the screen. Let's use a paragraph and have the buttons update the scoreboard for us, no need for a "score keeper" object or anything, we aren't feeling any pain from not having one of those (for the purposes of this example we're not creating live areas for accessibility).
 
-<script async src="https://jsfiddle.net/joshbruce/r7uc5mq7/embed/"></script>
+<div id="code-example-4">
+<button onclick="increment2(this)">0</button>
+<button onclick="increment2(this)">0</button>
+<button onclick="increment2(this)">0</button>
+<button onclick="increment2(this)">0</button>
+<p id="scoreboard-4">0</p>
+<style type="text/css">
+div#code-example-4 > button {
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #50e5db;
+	cursor: pointer;
+}
+div#code-example-4 > p {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 2rem;
+}
+</style>
+<script>
+function increment2(button) {
+  const targetValue = parseInt(button.innerHTML) + 1;
+  const scoreboard = document.getElementById('scoreboard-4');
+  const scoreboardCurrentValue = parseInt(scoreboard.innerHTML);
+  button.value = targetValue;
+  button.innerHTML = `${targetValue}`;
+  scoreboard.innerHTML = scoreboardCurrentValue + 1;
+}
+</script>
+
+<details>
+	<summary>HTML (iteration 4)</summary>
+<pre><code>&lt;button onclick="increment(this)">0&lt;/button>
+&lt;button onclick="increment(this)">0&lt;/button>
+&lt;button onclick="increment(this)">0&lt;/button>
+&lt;button onclick="increment(this)">0&lt;/button>
+&lt;p id="scoreboard">0&lt;/p>
+</code></pre>
+</details>
+
+<details>
+<summary>CSS (iteration 4)</summary>
+<pre><code>button {
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #50e5db;
+}
+p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem;
+}
+</code></pre>
+</details>
+
+<details>
+<summary>JavaScript (iteration 4)</summary>
+<pre><code>function increment(button) {
+  const targetValue = parseInt(button.innerHTML) + 1;
+  const scoreboard  = document.getElementById('scoreboard-4');
+  const scoreboardCurrentValue = parseInt(scoreboard.innerHTML);
+  button.value = targetValue;
+  button.innerHTML     = `${targetValue}`;
+  scoreboard.innerHTML = scoreboardCurrentValue + 1;
+}
+</code></pre>
+</details>
+</div>
 
 We could make the code smaller, by removing the whitespace and other letters:
 
@@ -169,7 +416,82 @@ For JS the argument was made that calling JS methods inside an HTML element was 
 
 So, we end up with something like this:
 
-<script async src="https://jsfiddle.net/joshbruce/bgugw1o7/embed/"></script>
+<div id="code-example-5">
+<button>0</button>
+<button>0</button>
+<button>0</button>
+<button>0</button>
+<p id="scoreboard-5">0</p>
+<style type="text/css">
+div#code-example-5 > button {
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #50e5db;
+	cursor: pointer;
+}
+div#code-example-5 > p {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 2rem;
+}
+</style>
+<script>
+var buttons = document.getElementById('code-example-5').getElementsByTagName('button');
+Array.from(buttons).forEach(function (button) {
+  button.addEventListener('click', function() {
+    const targetValue = parseInt(button.innerHTML) + 1;
+    const scoreboard = document.getElementById('scoreboard-5');
+    const scoreboardCurrentValue = parseInt(scoreboard.innerHTML);
+    button.value = targetValue;
+    button.innerHTML = `${targetValue}`;
+    scoreboard.innerHTML = scoreboardCurrentValue + 1;
+  });
+});
+</script>
+<details>
+	<summary>HTML (iteration 5)</summary>
+<pre><code>&lt;button>0&lt;/button>
+&lt;button>0&lt;/button>
+&lt;button>0&lt;/button>
+&lt;button>0&lt;/button>
+&lt;p id="scoreboard">0&lt;/p>
+</code></pre>
+</details>
+
+<details>
+<summary>CSS (iteration 5)</summary>
+<pre><code>button {
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #50e5db;
+  cursor: pointer;
+}
+p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem;
+}
+</code></pre>
+</details>
+
+<details>
+<summary>JavaScript (iteration 5)</summary>
+<pre><code>var buttons = document
+  .getElementsByTagName('button');
+Array.from(buttons).forEach(function (button) {
+  button.addEventListener('click', function() {
+    const targetValue = parseInt(button.innerHTML) + 1;
+    const scoreboard = document.getElementById('scoreboard-5');
+    const scoreboardCurrentValue = parseInt(scoreboard.innerHTML);
+    button.value = targetValue;
+    button.innerHTML = `${targetValue}`;
+    scoreboard.innerHTML = scoreboardCurrentValue + 1;
+  });
+});</code></pre>
+</details>
+</div>
 
 ```
 705 characters * 8 bytes = ~6kb
@@ -183,7 +505,9 @@ The value attribute, after all, is only there to set the initial value of the ap
 
 Fine, no JS-related stuff in the HTML.
 
-<script async src="https://jsfiddle.net/joshbruce/72hp0jfm/embed/"></script>
+
+> `Same as previous - removed use of value attribute in the button.`
+
 
 Brings us to about 100 characters for the HTML ([.1kb](one kilobyte)). About 500 for the JS ([.4kb](four kilobytes)). 663 all together or [.5kb](five kilobytes) still. So, time to first paint on a 14.4[.kbps](kilobytes per second) modem is ~0.1 seconds. Time to first interaction is ~0.3 seconds.
 
@@ -191,7 +515,89 @@ We've made it almost three times larger than iteration 4, without adding any new
 
 You want smaller HTML? I'll show you smaller HTML. We also did say, don't repeat yourself, and those four HTML buttons are just repeats, not equivalents to instantiating an object. (Enter JS—and other—template engines).
 
-<script async src="https://jsfiddle.net/joshbruce/epe61q1t/embed/"></script>
+<div id="code-example-6">
+<div id="cont-6"></div>
+<p id="scoreboard-6">0</p>
+<style type="text/css">
+div#code-example-6 > #cont-6 > button {
+	margin: 0.5rem;
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #50e5db;
+	cursor: pointer;
+}
+div#code-example-6 > p {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 2rem;
+}
+</style>
+<script>
+var container = document.getElementById('cont-6');
+for (var i = 0; i < 4; i++) {
+  let button = document.createElement('button');
+  button.innerHTML = 0;
+  container.appendChild(button);
+}
+var buttons = document.getElementById('cont-6').getElementsByTagName('button');
+Array.from(buttons).forEach(function (button) {
+  button.addEventListener('click', function() {
+	const targetValue = parseInt(button.innerHTML) + 1;
+	const scoreboard = document.getElementById('scoreboard-6');
+	const scoreboardCurrentValue = parseInt(scoreboard.innerHTML);
+	button.value = targetValue;
+	button.innerHTML = `${targetValue}`;
+	scoreboard.innerHTML = scoreboardCurrentValue + 1;
+  });
+});
+</script>
+<details>
+	<summary>HTML (iteration 6)</summary>
+<pre><code>&lt;div id="cont">&lt;/div>
+&lt;p id="scoreboard-6">0&lt;/p>
+</code></pre>
+</details>
+
+<details>
+<summary>CSS (iteration 6)</summary>
+<pre><code>button {
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #50e5db;
+  cursor: pointer;
+}
+p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem;
+}
+</code></pre>
+</details>
+
+<details>
+<summary>JavaScript (iteration 6)</summary>
+<pre><code>var container = document.getElementById('cont');
+for (var i = 0; i < 4; i++) {
+  let button = document.createElement('button');
+  button.innerHTML = 0;
+  container.appendChild(button);
+}
+var buttons = document.getElementsByTagName('button');
+Array.from(buttons).forEach(function (button) {
+  button.addEventListener('click', function() {
+    const targetValue = parseInt(button.innerHTML) + 1;
+    const scoreboard = document.getElementById('scoreboard-6');
+    const scoreboardCurrentValue = parseInt(scoreboard.innerHTML);
+    button.value = targetValue;
+    button.innerHTML = `${targetValue}`;
+    scoreboard.innerHTML = scoreboardCurrentValue + 1;
+  });
+});</code></pre>
+</details>
+</div>
+<!-- <script async src="https://jsfiddle.net/joshbruce/epe61q1t/embed/"></script> -->
 
 About 200 more characters (2 more kilobytes, for a total of [.7kb](seven kilobytes)) and no new functionality.
 
@@ -302,7 +708,7 @@ Anyway…
 
 Back to reasons HTML is still around…ummmmm…oh…right…there wouldn't be an internet UI without it.
 
-There also wouldn't be the Apple UI, it uses [.XML](eXtensible Markup Language) too. There wouldn't be the Android UI. There wouldn't be SVG. There wouldn't be NativeScript. There wouldn't be a lot of stuff when it comes to user interfaces without HTML and all of its XML-based cousins. What we don't like is writing it. That's why no one celebrates or knows most UIs are XML-based; we've put layers of abstraction and technology over it to try and hide it so people won’t have to write it (MS Frontpage 2000, baby, that's what I used back in the day). 
+There also wouldn't be the Apple UI, it uses [.XML](eXtensible Markup Language) too. There wouldn't be the Android UI. There wouldn't be SVG. There wouldn't be NativeScript. There wouldn't be a lot of stuff when it comes to user interfaces without HTML and all of its XML-based cousins. What we don't like is writing it. That's why no one celebrates or knows most UIs are XML-based; we've put layers of abstraction and technology over it to try and hide it so people won’t have to write it (MS Frontpage 2000, baby, that's what I used back in the day).
 
 Unfortunately, tools that write it for you still kinda suck, almost 20 years later. Therefore, if you care about craftsmanship, you're still writing most of it by hand; or, your product has already incrementally scaled over the course of a decade, I'm looking at you Facebook.
 
