@@ -1,6 +1,7 @@
 ---
 title: Web development
 created: 20211031
+updated: 20211105
 ---
 
 I differentiate [software development](/software-development) from web development in the sense that all web development is software development but not all software development is web development. Web development is software development in a specific context, with contextual constraints.
@@ -24,6 +25,8 @@ Now, to be fair, that doesn't include the supporting players, if you will. The p
 I'd say that's pretty "low-code."
 
 You can read more about the 2021 update [over here](/web-development/2021-site-in-depth).
+
+I just realized [JAMstack](https://jamstack.com) was a thing and I find it funny from the perspective that it's kinda where we're heading. Pretty sure this was originally the idea, precursor, or concept around server-less, which I admittedly didn't pay too much attention to. I'm listening to an audiobook on the subject right now and they seem to be making some of the same arguments and points I've been making and brain-dumping here.
 
 ## And before
 
@@ -69,7 +72,7 @@ I actually didn't own the joshbruce.com domain until 2010. And I didn't do much 
 
 During this time I spent more time trying out other people's platforms than working on my own. Embracing that Web 2.0 consumer-created content life, I suppose.
 
-I always had concerns regarding using other people's platforms. The main concern being that I didn't own the terms of service or the business operations. So, I never knew what would happen next. 
+I always had concerns regarding using other people's platforms. The main concern being that I didn't own the terms of service or the business operations. So, I never knew what would happen next.
 
 Would the company decide to do some interesting things with paywalls once they became popular enough to start being exclusionary in their practices, for example?
 
