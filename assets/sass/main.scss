@@ -368,7 +368,13 @@ nav > ul {
       border: 3px solid var(--gray-lightest);
     }
   }
+  details {
+    font-weight: var(--bold-font);
 
+    & summary {
+      color: var(--key-light);
+    }
+  }
 }
 
 blockquote {

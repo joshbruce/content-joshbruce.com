@@ -337,6 +337,13 @@ main iframe[src*="https://jsfiddle.net"], article img,
 article iframe[src*="https://jsfiddle.net"]{
     border:3px solid var(--gray-lightest);
   }
+
+  details{
+    font-weight:var(--bold-font);
+  }
+  details summary{
+    color:var(--key-light);
+  }
 }
 blockquote{
   margin:var(--m-spacer);
