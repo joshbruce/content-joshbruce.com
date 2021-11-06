@@ -140,7 +140,7 @@ h6{
   margin-top:var(--l-spacer);
   margin-bottom:var(--xs-spacer);
   font-family:var(--head-font);
-  font-size:var(--2xl-font);
+  font-size:clamp(30pt, 9.375vw, 35pt);
   line-height:var(--l-line-height);
 }
 h1 + ol, h1 + ul, h1 + p,
@@ -235,6 +235,12 @@ main abbr, article abbr{
   -webkit-text-decoration:var(--none);
           text-decoration:var(--none);
   border-bottom:var(--1-px) var(--dashed) var(--gray-darker);
+}
+main dl > dt, article dl > dt{
+  margin-top:var(--m-spacer);
+}
+main dl > dd, article dl > dd{
+  margin-bottom:var(--s-spacer);
 }
 
 nav > ul{

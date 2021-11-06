@@ -14,6 +14,7 @@ navigation: [
 		/web-development Web development,
 		/web-development/on-constraints On constraints,
 		/web-development/modern-web-development Modern web development,
+		/web-development/static-dynamic-and-interactive Static\ dynamic\ and interactive,
 		/web-development/refactoring-re-engineering-and-rebuilding Refactoring\ re-engineering\ and rebuilding
 	]
 ]

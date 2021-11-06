@@ -160,7 +160,8 @@ h6 {
   margin-top: var(--l-spacer);
   margin-bottom: var(--xs-spacer);
   font-family: var(--head-font);
-  font-size: var(--2xl-font);
+  font-size: clamp(30pt, 9.375vw, 35pt);
+  // font-size: var(--2xl-font);
   line-height: var(--l-line-height);
 
   + ol, + ul, + p {
@@ -246,6 +247,16 @@ main, article {
   abbr {
     text-decoration: var(--none);
     border-bottom: var(--1-px) var(--dashed) var(--gray-darker);
+  }
+
+  dl {
+    & > dt {
+      margin-top: var(--m-spacer);
+    }
+
+    & > dd {
+      margin-bottom: var(--s-spacer);
+    }
   }
 }
 
