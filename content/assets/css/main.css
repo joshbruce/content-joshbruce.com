@@ -337,11 +337,10 @@ main iframe[src*="https://jsfiddle.net"], article img,
 article iframe[src*="https://jsfiddle.net"]{
     border:3px solid var(--gray-lightest);
   }
-
-  details{
+  main details, article details{
     font-weight:var(--bold-font);
   }
-  details summary{
+  main details summary, article details summary{
     color:var(--key-light);
   }
 }

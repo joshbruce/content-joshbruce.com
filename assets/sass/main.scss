@@ -367,12 +367,13 @@ nav > ul {
     iframe[src*="https://jsfiddle.net"] {
       border: 3px solid var(--gray-lightest);
     }
-  }
-  details {
-    font-weight: var(--bold-font);
 
-    & summary {
-      color: var(--key-light);
+    details {
+      font-weight: var(--bold-font);
+
+      & summary {
+        color: var(--key-light);
+      }
     }
   }
 }
