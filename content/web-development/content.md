@@ -26,7 +26,7 @@ I'd say that's pretty "low-code."
 
 You can read more about the 2021 update [over here](/web-development/2021-site-in-depth).
 
-I just realized [JAMstack](https://jamstack.com) was a thing and I find it funny from the perspective that it's kinda where we're heading. Pretty sure this was originally the idea, precursor, or concept around server-less, which I admittedly didn't pay too much attention to. I'm listening to an audiobook on the subject right now and they seem to be making some of the same arguments and points I've been making and brain-dumping here.
+November 5th update: I just realized [JAMstack](https://jamstack.com) was a thing and I find it funny from the perspective that it's kinda where we're heading. Pretty sure this was originally the idea, precursor, or concept around server-less, which I admittedly didn't pay too much attention to. I'm listening to an audiobook on the subject right now and they seem to be making some of the same arguments and points I've been making and brain-dumping here.
 
 ## And before
 
