@@ -44,7 +44,7 @@ You know what your server can do.
 
 Industrial-grade hardware, software, and connection to the vast reaches of the Internet. You don't know if your user is the billionaire Richard Branson using a super computer or a 10 year old Nigerian girl surfing the Internet on a Nokia phone to help finish her homework by street light. No matter if 80% of the population are Richard Branson, if you develop your system to cater to the 10 year old, the Richard Branson's of the world are covered as well.
 
-As the avant-garde ruling and steering the web, developers can easily get in the mindset that what everyone needs in order to survive, what they have access to, and what they want to play with are the same things developers do…this is not the case - at all.
+As the avant-garde ruling and steering the web, developers can easily get in the mindset that what everyone needs in order to survive, what they have access to, and what they want to play with are the same things developers do…this is not the case —at all.
 
 TDD basically says, break your functional requirements down into smaller technical requirements. Prioritize the technical requirements by any means you deem suitable (self-organization); I recommend finish-to-start and shortest time to complete, but whatever floats your boat. Only write the production code after you have written the test. Then, only write a new test when you receive a new requirement in your technical requirements backlog.
 
@@ -52,15 +52,16 @@ To the backstory!
 
 ***
 
-<i>A gentleman I know is learning how to be a software developer. He posted code the other day for a game he's building. It's a type of counter game.
-From the code he posted, I pulled out these two functional requirements (there's a finish to the game, but this article will be rather long with a lot of examples already):</i>
+<i>A gentleman I know is learning how to be a software developer. He posted code the other day for a game he's building. It's a type of counter game.</i>
+
+From the code he posted, I pulled out these two functional requirements (there's a finish to the game, but this article will be rather long with a lot of examples already):
 
 1. In the game there are four items a user can click on.
 2. Every time a user clicks on one of the four items, there is a score printed on the screen.
 
 There were some things I would have done differently to overcome certain constraints, but I'm not the "Master" to his "Padawan" of the [Jedi Order](https://en.wikipedia.org/wiki/Jedi) and he didn't ask for a code review; so, I didn't say anything.
 
-That is until someone else chimed in and said, "You should make that if statement a switch."
+That is until someone else chimed in and said, "You should make that `if` statement a `switch`."
 
 This is one of those old-school debates in software development. Switches versus conditionals and when to use them. I don't like getting into these types of debates unless the difference can be empirically demonstrated at an order of magnitude better than the other. (They aren't different in purpose.)
 
@@ -68,6 +69,7 @@ I did chime in on it though, because there was a deeper issue—the conditions c
 
 I said, "Here's a challenge for you. There are a few ways to do it given the technology stack you are using: remove the conditional entirely and allow for an infinite number of items. You can also remove your dependency on JQuery. Who knows, maybe this game will become a code kata for you to learn other languages; your own, personal FizzBuzz."
 Then I realized, this is the perfect example to demonstrate this constraint.
+
 Let's begin!
 
 ***
@@ -217,13 +219,19 @@ And, about a decade or so ago, this would have been the only way to do it. But t
 
 Two problems. One, we're repeating ourselves; thereby, breaking the DRY principle, which unabashedly and probably with full knowledge of its own irony, states: don't repeat yourself.
 
-For procedural code, which causes side-effects you want to avoid duplication because it means if you change the logic or behavior for some reason, you need to remember (or find) all the places the old logic exists; so, another constraint is related to how you should feel when you are about to copy and paste code - from anywhere.
+For procedural code, which causes side-effects you want to avoid duplication because it means if you change the logic or behavior for some reason, you need to remember (or find) all the places the old logic exists; so, another constraint is related to how you should feel when you are about to copy and paste code—from anywhere.
 
 But, this article focuses on bandwidth.
 
 Every letter you write is roughly 8 bytes in UTF-8, which is the predominate font standard on the web today (we used to use another that took less space per character, but it had its own limitations—to use an apostrophe or not to use an apostrophe, that was the question); this 8 bytes does include white space characters (every key stroke, costs you 8 bytes, just remember that).
+```
+<button 
+  style="padding: 20px; border: none; border-radius: 5px; background-color: #50e5db" 
+  onclick="var targetValue = parseInt(this.value) + 1; this.value = targetValue; this.innerHTML = `${targetValue}`;" 
+  value="0">
+  ```
 
-We have 28 characters in our code right now; so, we're at about 224 bytes. Back in the day, the average (because it was the only) speed you could go was 14kbs (there were slower modems, but this speed was the one that really penetrated the market for purposes other than fax machines). Right now, this single page client-side web-app would load instantly at that speed.
+We have ~210 characters in our code, four times, right now; so, we're at about 6,720 bytes. Back in the day, the average (because it was the only) speed you could go was 14.4[.kbs](kilobytes per second) (there were slower modems, but this speed was the one that really penetrated the market for purposes other than fax machines). Right now, this single page client-side web-app (SPA) would load in less than a second at that speed.
 
 Having said that, back in the day we wanted to do a lot more than put 4 buttons on a page for people to count things with; therefore, we had to figure out ways to reduce duplication because "broadband" for consumers was roughly 1mb in speed and ran about $100+ a month (for half that cost, I get 10 times that bandwidth 20 years later); therefore, nobody except industry was paying for broadband (they're paying for faster, more expensive stuff now).
 

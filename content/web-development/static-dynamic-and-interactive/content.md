@@ -44,7 +44,7 @@ As of this writing, there isn't a single line of HTML anywhere in the content or
 
 ## Static sites
 
-The drawback felt by having a static was that it was so hard to change the structure of pages and look and feel of the site.
+The drawback felt by having a static site was that it was so hard to change the structure of pages and look and feel of the site.
 
 Want to update the navigation? Sure thing, go through every page of the site and copy-and-paste the HTML you want updated.
 
