@@ -67,13 +67,13 @@ The ability to server different experiences based on different parameters was aw
 
 The drawback to multi-page sites was that it was difficult to keep the site architecture and code architecture straight; depending on the number of separate files.
 
-The benefit here though was the ability to mix-and-match experiences and server gets to be a server. I could have part of my site be static while another part was dynamic. Optimizing the experience for the content and user needs.
+The benefit here though was the ability to mix-and-match experiences and the  server gets to be a server. I could have part of my site be static while another part was dynamic. Optimizing the experience for the content and user needs.
 
 I'm pretty sure this is where [joshbruce.com](https://joshbruce.com) is headed. That is, of course, so long as I don't get bored and it seems appropriate.
 
 ## Single-page sites
 
-The drawback to the single-page site is that you're kinda all in on an approach and technology stack. You also take on more of the responsibilities usually left to a the server software of your choice.
+The drawback to the single-page site is that you're kinda all in on an approach and technology stack. You also take on more of the responsibilities usually left to the server software of your choice.
 
 The benefit though is that it can be, theoretically, easier to keep track of. However, with the way things are going with frameworks and the like, I'm not so sure.
 
@@ -86,19 +86,30 @@ I've been exposed to two primary arguments against a server-side application or 
 1. full page refreshes and
 2. they're slow.
 
-The slow part usually doesn't happen until your traffic outperforms the hardware you're running on. Each network call has to go through two or three steps before even reaching the server (another computer somewhere connected to the Internet and running some type of server software). The first is resolving the domain name and the second is in the [.TCP](Transmission Control Protocol), which I'm not qualified to speak much on. No matter what, these two things need to happen before the server does anything. The more requests made, the longer it will take the site to load. Each image asset, each style sheet, and so on. Basically, if it's not text and is requesting from the server, the connection can become the bottleneck. Each request can take around 100 milliseconds to connect to the server.
+The slow part usually doesn't happen until your traffic outperforms the hardware you're running on. 
 
-Then the speed is on you.
+Each network call has to go through two or three steps before even reaching the server (another computer somewhere connected to the Internet and running some type of server software):
+
+1. resolve domain name and 
+2. apply (??) the [.TCP](Transmission Control Protocol), which I'm not qualified to speak much on. 
+
+No matter what, these two things need to happen before the server does anything. Thats the front part. 
+
+On the back part every response will have a size, which will need to be streamed back to the requester. Depending on the network speeds, this too could take a while.
+
+The middle bit is on the developer or application. 
 
 How big are the assets? Do you compress the assets before they're sent back? How consolidated can you make other parts of the experience?
 
+I have little control over how long it takes the front or back ends of the request-response transaction, so, I try and optimize the middle.
+
 ## Client-side
 
-The big drawback for me here is that accessibility begins to become challenging and a lot more work. The entire site essentially becomes one big [`aria-live`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) region. And we lose what we had for free from the server-side.
+The big drawback for me here is that accessibility begins to become challenging and a lot more work. The entire site can become one big [`aria-live`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) region. And we lose what we had for free from the server-side.
 
-Another drawback  is you don't know how cool the machine is running your site.
+Another drawback is you don't know how cool the machine is running your site.
 
-Basically, we ask the user's hardware take on the role of a server. Further, we ask our code to do the same, as well as taking on the role of the browser in certain respects. If someone isn't running on good hardware, they could have a bad experience. The, "It works on my machine" problem. We don't know their connection speed; or, will need to account for it, which means more code.
+Basically, we ask the user's hardware to take on the role of a server. Further, we ask our code to do the same, as well as taking on the role of the browser in certain respects. If someone isn't running on good hardware, they could have a bad experience. The, "It works on my machine" problem. We don't know their connection speed; or, will need to account for it, which means more code.
 
 Another drawback is the notion that people can turn off client-side scripting languages; though this is unusual.
 
