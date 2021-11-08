@@ -1,3 +1,7 @@
+> The content for [joshbruce.com](https://joshbruce.com) lives with the [site code](https://github.com/8fold/site-joshbruce.com) in the `content` folder.
+>
+> If you would like to contribute, please do so over there.
+
 # Content for JoshBruce.com
 
 This repository holds some of the writings of Joshua C. Bruce; specifically, those used for [joshbruce.com](https://joshbruce.com).
